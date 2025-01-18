@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@200;300;400;600&display=swap');
+:root {
+    --primary-1: #590d22;
+    --primary-2: #800f2f;
+    --primary-3: #a4133c;
+    --primary-4: #c9184a;
+    --primary-5: #ff4d6d;
+    --primary-6: #ff758f;
+    --primary-7: #ff8fa3;
+    --primary-8: #ffb3c1;
+    --primary-9: #ffccd5;
+    --primary-10: #fff0f3;
+
+    --main-bg: var(--primary-1);
+    --text-color: var(--primary-10);
+    --highlight: var(--primary-5);
+    --secondary-bg: var(--primary-2);
+    --accent: var(--primary-8);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+*::selection {
+    background: var(--highlight);
+    color: var(--primary-1);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--secondary-bg);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--highlight);
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--text-color);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 0.7rem 3rem;
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: 0 0.5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background: var(--highlight);
+}
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid var(--accent);
+    color: var(--text-color);
+}
+
+.heading-span {
+    color: var(--highlight);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: var(--secondary-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border: 0.7rem solid var(--highlight);
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+.user .POST {
+    font-size: 24px;
+    font-weight: bold; /* Optional: Make the text bold */
+    color: var(--accent);
+    text-transform: uppercase; /* Optional: Makes text uppercase */
+    margin-top: 10px; /* Optional: Adds spacing above the text */
+}
+
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background: var(--highlight);
+}
+
+#menu {
+    position: fixed;
+    background: var(--secondary-bg);
+    top: 2rem;
+    right: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.home h1 {
+    font-size: 5rem;
+    color: var(--text-color);
+}
+
+.home h1 span {
+    color: var(--highlight);
+}
+
+.home p {
+    font-size: 2rem;
+    color: var(--accent);
+    padding: 1rem 0;
+}
+.about {
+    padding: 4rem 15rem; /* Increased padding for spacing */
+    background: var(--primary-1); /* Background color for contrast */
+    color: var(--text-color); /* Text color */
+}
+
+.about .heading {
+    font-size: 4.5rem; /* Larger heading size */
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem; /* Space below the heading */
+}
+
+.about .heading span {
+    color: var(--highlight); /* Highlight color for "about" */
+}
+
+.about .btn {
+    display: block; /* Make the button standalone */
+    margin: 2rem auto; /* Center the button */
+    font-size: 2.5rem; /* Larger button text */
+    padding: 1rem 4rem; /* Adjust padding for a bigger button */
+    border-radius: 5rem;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    align-items: center;
+    justify-content: center; /* Center-align the content */
+}
+
+.about .info {
+    flex: 1; /* Let it take available space */
+    max-width: 50rem; /* Restrict the maximum width */
+    text-align: left; /* Align text to the left */
+}
+
+.about .info h3 {
+    font-size: 3rem; /* Larger font size for details */
+    margin: 1.5rem 0; /* Spacing between each item */
+    color: var(--text-color);
+}
+
+.about .info h3 span {
+    color: var(--highlight); /* Highlight the labels */
+    font-weight: bold;
+}
+.education {
+    padding: 4rem 15rem; /* Space around the section */
+    background: var(--primary-1); /* Section background color */
+    color: var(--text-color); /* Text color */
+}
+
+.education .heading {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.education .heading span {
+    color: var(--highlight); /* Highlight color for 'education' */
+}
+
+.education .box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 2rem; /* Space between boxes */
+    justify-content: center; /* Center the boxes */
+}
+
+.education .box {
+    background: var(--secondary-bg); /* Background color for boxes */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1 1 30%; /* Responsive sizing (30% width with wrapping) */
+    max-width: 30rem; /* Restrict maximum width of boxes */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+}
+
+.education .box:hover {
+    transform: translateY(-1rem); /* Lift the box slightly on hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.education .box i {
+    font-size: 4rem; /* Icon size */
+    color: var(--highlight); /* Icon color */
+    margin-bottom: 1rem;
+}
+
+.education .box span {
+    font-size: 1.8rem;
+    display: block;
+    color: var(--text-color-light); /* Light text color */
+    margin-bottom: 1rem;
+}
+
+.education .box h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-transform: uppercase; /* Make the text all uppercase */
+    margin: 0;
+}
+
+
+.contact {
+    padding: 4rem 15rem; /* Adjust padding around the contact section */
+    background: var(--primary-1); /* Background color for the section */
+    color: var(--text-color); /* General text color */
+}
+
+.contact .heading {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.contact .heading span {
+    color: var(--highlight); /* Highlighted color for 'contact' */
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+    justify-content: space-between; /* Distribute space evenly */
+    gap: 2rem;
+    align-items: flex-start; /* Align the items to the top */
+}
+
+.contact .content {
+    flex: 1 1 45%; /* Adjust width of the content box */
+    max-width: 45%;
+}
+
+.contact .content .title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.contact .content .info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color-light); /* Lighter color for text */
+}
+
+.contact .content .info h3 i {
+    color: var(--highlight); /* Icon color */
+    font-size: 2rem;
+}
+
+form {
+    flex: 1 1 45%; /* Adjust width of the form box */
+    max-width: 45%;
+    background: var(--secondary-bg); /* Background color for form */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+form .box {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid var(--highlight); /* Highlight border */
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    background: var(--primary-1); /* Match input background with section */
+    color: var(--text-color);
+    outline: none;
+}
+
+form .box:focus {
+    border-color: var(--text-color-light); /* Focused border color */
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); /* Slight shadow on focus */
+}
+
+form .message {
+    resize: none; /* Disable resizing for the message box */
+    height: 15rem;
+}
+
+form button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: var(--highlight); /* Button background color */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    transform 0.2s; /* Corrected: no extra comma */
+}
+
+
+form button:hover {
+    background: var(--text-color-light); /* Darker color on hover */
+    transform: translateY(-0.3rem); /* Slight lift effect */
+}
+
+
+/* media queries */
+@media (max-width:1200px){
+    html{
+    font-size: 55%;
+}
+
+  .home{
+    padding:1rem 4rem;
+  }
+
+}
+@media (max-width:991px){
+      header{
+        left: -120%;
+      }
+       #menu{
+       display: block;
+       }
+       header.toggle{
+        left: 0%;
+       }
+
+       body{
+        padding:0;
+
+       }
+
+
+
+
+
+
+}
+
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    } 
+}
+
+    @media (max-width:400px){
+    header{
+      width: 100vw;
+    }
+    .heading{
+        margin:0 3rem;
+
+    }
+    .about .row .counter .box{
+        width: 100%;
+    }
+}
+.education.box-container .box{
+    width:100%;
+}
